@@ -1,0 +1,175 @@
+@charset "UTF-8";
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.soc-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.soc-list__items {
+  width: 44px;
+  height: 44px;
+}
+.soc-list__items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.soc-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--backgrond_soc_color);
+  background-color: var(--primary_text-color);
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+.soc-list__link:hover, .soc-list__link:focus {
+  background-color: var(--accent_color);
+  color: var(--primary-white-color);
+}
+
+.soc-list__icons {
+  fill: currentColor;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding-left: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+textarea {
+  resize: none;
+}
+
+:root {
+  /* основний колір тексту */
+  --primary_text-color: #eeeded;
+  --gradient: linear-gradient(to bottom, #03c7a3, #1892dd);
+  --backgrond_soc_color: #1892ddab;
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(47, 48, 58, 0.4);
+  height: 100vh;
+  color: var(--primary_text-color);
+  overflow: hidden;
+}
+
+.section {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.circles {
+  position: relative;
+}
+.circles::before, .circles::after {
+  content: "";
+  position: absolute;
+  background: var(--gradient);
+}
+.circles::before {
+  --size: 300px;
+  left: calc(var(--size) * 1.5);
+  top: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+}
+.circles::after {
+  --size: 1200px;
+  left: calc(var(--size) / -3);
+  top: calc(var(--size) / 5);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 199, 163, 0.5960784314)), color-stop(70%, rgba(24, 146, 221, 0.6705882353)));
+  background: linear-gradient(to bottom, rgba(3, 199, 163, 0.5960784314), rgba(24, 146, 221, 0.6705882353) 70%);
+}
+
+.soc-list {
+  position: absolute;
+  bottom: 10%;
+  left: 2%;
+}/*# sourceMappingURL=main.css.map */
